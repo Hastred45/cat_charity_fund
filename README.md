@@ -1,3 +1,6 @@
+[![Python](https://img.shields.io/badge/-Python-464646?style=flat&logo=Python&logoColor=ffffff&color=043A6B)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/-FastAPI-464646?style=flat&logoColor=ffffff&color=043A6B)](https://fastapi.tiangolo.com/)
+
 # QRkot_Spreadsheets
 
 ## Описание
@@ -66,8 +69,6 @@ uvicorn app.main:app --reload
 - Пожертвования:
     - **/donation/** - получение списка всех пожертвований и создание пожертвования
     - **/donation/my** - получение списка всех пожертвований аутентифицированного пользователя
-- Отчеты Google Sheets:
-    - **/google** - получение отчета о закрытых (профинансированных) проектах в формате Google Sheets. Отчет создается в указанном в .env личном аккаунте Google.
 
 Со схемами запросов и ответов можно ознакомиться в документации или в файле со спецификацией - openapi.json.
 
@@ -76,6 +77,6 @@ uvicorn app.main:app --reload
 - ### **MIT License**
 
 ### Автор
-Pushkarev Anton
+Sergei Osetrov
 
-pushkarevantona@gmail.com
+hastred45@yandex.ru
