@@ -1,7 +1,9 @@
 [![Python](https://img.shields.io/badge/-Python-464646?style=flat&logo=Python&logoColor=ffffff&color=043A6B)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/-FastAPI-464646?style=flat&logo=FastAPI&logoColor=ffffff&color=043A6B)](https://fastapi.tiangolo.com/)
-[![SQLAlchemy](https://img.shields.io/badge/-SQLAlchemy-464646?style=flat&logoColor=ffffff&color=043A6B)](https://pypi.org/project/SQLAlchemy/)
-[![Alembic](https://img.shields.io/badge/-SQLAlchemy-464646?style=flat&logoColor=ffffff&color=043A6B)](https://pypi.org/project/alembic/)
+[![SQLAlchemy](https://img.shields.io/badge/-SQLAlchemy-464646?style=flat&logo=SQLAlchemy&logoColor=ffffff&color=043A6B)](https://pypi.org/project/SQLAlchemy/)
+[![Alembic](https://img.shields.io/badge/-Alembic-464646?style=flat&logo=Alembic&logoColor=ffffff&color=043A6B)](https://pypi.org/project/alembic/)
+[![Pydantic](https://img.shields.io/badge/-Pydantic-464646?style=flat&logo=Pydantic&logoColor=ffffff&color=043A6B)](https://pypi.org/project/pydantic/)
+[![Asyncio](https://img.shields.io/badge/-Asyncio-464646?style=flat&logo=Asyncio&logoColor=ffffff&color=043A6B)](https://docs.python.org/3/library/asyncio.html)
 
 # QRkot | Сat сharity fund
 
@@ -12,14 +14,6 @@
 **QRkot** - это API сервиса по сбору средств для финансирования благотворительных проектов. В сервисе реализована возможность регистрации пользователей, добавления благотворительных проектов и пожертвований, которые распределяются по открытым проектам.
 
 Настроено автоматическое создание первого суперпользователя при запуске проекта.
-
-## Ключевые технологии и библиотеки:
-- [Python](https://www.python.org/);
-- [FastAPI](https://fastapi.tiangolo.com/);
-- [SQLAlchemy](https://pypi.org/project/SQLAlchemy/);
-- [Alembic](https://pypi.org/project/alembic/);
-- [Pydantic](https://pypi.org/project/pydantic/);
-- [Asyncio](https://docs.python.org/3/library/asyncio.html);
 
 ## Установка
 1. Склонируйте репозиторий:
