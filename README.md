@@ -68,10 +68,6 @@ uvicorn app.main:app --reload
 
 Со схемами запросов и ответов можно ознакомиться в документации или в файле со спецификацией - openapi.json.
 
-
-## Лицензия
-- ### **MIT License**
-
 ### Автор
 Sergei Osetrov
 
