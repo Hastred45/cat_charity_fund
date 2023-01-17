@@ -1,6 +1,5 @@
 from conftest import BASE_DIR
 
-
 try:
     from app.models.financial_base import FinancialBase
 except (NameError, ImportError):
