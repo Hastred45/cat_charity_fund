@@ -6,6 +6,12 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.crud.charity_project import charityproject_crud
 from app.models import CharityProject
 
+NAME_DUPLICATE = 'Проект с таким именем уже существует!'
+PROJECT_CLOSE = 'Закрытый проект нельзя редактировать!'
+PROJECT_RAISING_MONEY = 'В проект были внесены средства, не подлежит удалению!'
+SUMM_LOWER = 'Нельзя установить сумму меньше уже вложенной: '
+PROJECT_NOT_FOUND = 'Не найден благотворительный проект по id: '
+
 
 async def check_name_duplicate(
     project_name: str,
@@ -18,7 +24,7 @@ async def check_name_duplicate(
     if project:
         raise HTTPException(
             status_code=HTTPStatus.BAD_REQUEST,
-            detail='Проект с таким именем уже существует!'
+            detail=NAME_DUPLICATE
         )
 
 
@@ -31,7 +37,7 @@ async def check_existence(
     if project is None:
         raise HTTPException(
             status_code=HTTPStatus.NOT_FOUND,
-            detail=f'Благотворительный проект по id: {project_id} не найден'
+            detail=PROJECT_NOT_FOUND + f'{project_id}'
         )
     return project
 
@@ -43,12 +49,12 @@ def check_amount(obj, new_amount=None):
         if invested > new_amount:
             raise HTTPException(
                 status_code=HTTPStatus.UNPROCESSABLE_ENTITY,
-                detail=f'Нельзя установить сумму меньше уже вложенной: {invested}'
+                detail=SUMM_LOWER + f'{invested}'
             )
     elif invested > 0:
         raise HTTPException(
             status_code=HTTPStatus.BAD_REQUEST,
-            detail='В проект были внесены средства, не подлежит удалению!'
+            detail=PROJECT_RAISING_MONEY
         )
     return obj
 
@@ -58,5 +64,5 @@ def check_closed(obj):
     if obj.fully_invested:
         raise HTTPException(
             status_code=HTTPStatus.BAD_REQUEST,
-            detail='Закрытый проект нельзя редактировать!'
+            detail=PROJECT_CLOSE
         )

@@ -19,3 +19,6 @@ class AbstractModel(Base):
     fully_invested = Column(Boolean, default=False)
     create_date = Column(DateTime, default=datetime.now)
     close_date = Column(DateTime, nullable=True)
+
+    def __repr__(self) -> str:
+        return super().__repr__()

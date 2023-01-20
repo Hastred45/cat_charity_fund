@@ -25,13 +25,11 @@ router.include_router(
 @router.delete(
     '/users/{id}',
     tags=['users'],
-    # Параметр, который показывает, что метод устарел.
     deprecated=True
 )
 def delete_user(id: str):
     """Не используйте удаление, деактивируйте пользователей."""
     raise HTTPException(
-        # 405 ошибка - метод не разрешен.
         status_code=405,
         detail="Удаление пользователей запрещено!"
     )
